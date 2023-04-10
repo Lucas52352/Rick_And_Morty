@@ -1,0 +1,193 @@
+/* todo IMPORTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+/* todo BASE */
+
+
+.App {  
+   background-size:100%;
+   background-repeat: repeat-y;
+   background-attachment: fixed;
+   height:100%;
+   width:100%;
+   display: flex;
+   flex-direction: column;
+}  
+
+
+body {
+   background-image: linear-gradient(rgb(50, 0, 125), rgb(0, 255, 123), rgb(94, 0, 106));
+   background-size:100%;
+   background-repeat: repeat-y;
+   background-attachment: fixed;
+   height:100%;
+   width:100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+/* todo CARDS */
+
+.cards {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+}
+
+.button {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   margin-left: 85%;
+   height: 6%;
+   width: 20%;
+   background-color: #88ff00;
+   border: none;
+   border-radius: 100%;
+   color: rgb(7, 4, 4);
+   border-color: black;
+   font-size: 1rem;
+   font-weight: bolder;
+   cursor: pointer;
+   transition: .8s;
+   border: solid;
+}
+
+.button:hover {
+   background-color: #b4bdb8;
+}
+
+.card {
+   font-family: 'DotGothic16', sans-serif;
+   height: 45rem;
+   width: 12rem;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   flex-direction: column;
+   background-color: #08cc63;
+   border-radius: 12px;
+   margin: 20px;
+   padding: 2%;
+   text-align: center;
+   align-self: center;
+   border: solid;
+   border-color: #000000
+}
+
+.image {
+   width: 90%;
+   align-self: center;
+   display: flex;
+   justify-items: flex-end;
+   border: solid 2px;
+   border-radius: 15px;
+
+}
+
+.name {
+   font-family: 'Creepster', cursive;
+}
+
+/* todo NAV */
+
+.header {
+   background-color: rgba(0, 0, 0, 0.764);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 120px;
+   padding: 5px 10%;
+   transition: .8s;
+}
+
+.img1 {
+   width: 23%
+}
+
+.buttonNav {
+   size: 190px;
+   background-color: rgb(1, 192, 90);
+   font-family:  'Creepster', cursive;
+   font-size: large;
+   width: 50px;
+   transition: .8s;
+   cursor: pointer;
+}
+
+.buttonNav:hover {
+   background-color: #e9ed00;
+}
+
+/* todo SEARCHBAR */
+
+.search {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.searchButton {
+   background-color: rgb(1, 192, 90);
+   font-family:  'Creepster', cursive;
+   width: 50px;
+   transition: .8s;
+   margin: 10px;
+   cursor: pointer;
+}
+
+.searchButton:hover {
+   background-color: #71eeab;
+
+}
+
+.searchImg {
+   display: flex;
+   width: 4rem;
+}
+
+.input{ 
+   display: flex;
+   font-size: larger;
+   font-family:  'Creepster', cursive;
+   width: 150px;
+   flex-direction: row;
+   margin-top: 10px;
+}
+
+/* todo ABOUT */
+
+.about {
+   color: #e9ed00;
+   display: flex;
+   text-align: center;
+   justify-content: center;
+   flex-direction: column;
+}
+
+/* todo FORM */
+
+.form { 
+   font-family: 'DotGothic16', sans-serif;
+   border: solid rgb(26, 255, 0);
+   width: 15rem;
+   flex-wrap: wrap;
+   background-color: #2b2929;
+   border-radius: 12px;
+   text-align: center;
+   align-items: center;
+   padding: 3px;
+   display: flex;
+   justify-content: center;
+   align-self: center;
+   color: #00ff44;
+}
+
+.formImg {
+   width: 100%
+}
+

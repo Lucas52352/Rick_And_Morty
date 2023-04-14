@@ -3,10 +3,11 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
+const URL_BASE = 'https://be-a-rym.up.railway.app/api/character'
+const API_KEY = '04b1fbd63fb6.5f27b86200d900cd5422'
+
 const Detail = () => {
 
-    const URL_BASE = 'https://be-a-rym.up.railway.app/api/character'
-    const API_KEY = '04b1fbd63fb6.5f27b86200d900cd5422'
 
     const { id  } = useParams()
     const [character, setCharacter] = useState({})
@@ -25,7 +26,7 @@ const Detail = () => {
      }, [id]);
 
     return (
-        <div className="card">
+        <div className="cardDetail">
             <h2 className="name">{character?.name}</h2>
             <img className="image" src={character?.image} alt={character?.name} />
             <h2>{character?.status}</h2>

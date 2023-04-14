@@ -37,12 +37,11 @@ body {
    justify-content: space-evenly;
 }
 
-.button {
+.buttonClose {
    display: flex;
    justify-content: center;
    flex-direction: column;
-   margin-left: 85%;
-   height: 6%;
+   height: 20%;
    width: 20%;
    background-color: #88ff00;
    border: none;
@@ -57,29 +56,28 @@ body {
 }
 
 .button:hover {
-   background-color: #b4bdb8;
+   background-color: #29d676;
 }
 
-.card {
+.cardDetail {
    font-family: 'DotGothic16', sans-serif;
-   height: 45rem;
-   width: 12rem;
    display: flex;
    justify-content: center;
    flex-wrap: wrap;
    flex-direction: column;
-   background-color: #08cc63;
+   background-color: #009552;
    border-radius: 12px;
    margin: 20px;
    padding: 2%;
    text-align: center;
    align-self: center;
-   border: solid;
-   border-color: #000000
+
+   height: fit-content;
+   width: 10rem;
 }
 
 .image {
-   width: 90%;
+   width: 80%;
    align-self: center;
    display: flex;
    justify-items: flex-end;
@@ -98,6 +96,7 @@ body {
    background-color: rgba(0, 0, 0, 0.764);
    display: flex;
    justify-content: space-between;
+   flex-wrap: wrap;
    align-items: center;
    height: 120px;
    padding: 5px 10%;
@@ -113,9 +112,9 @@ body {
    background-color: rgb(1, 192, 90);
    font-family:  'Creepster', cursive;
    font-size: large;
-   width: 50px;
    transition: .8s;
    cursor: pointer;
+   width: max-content;
 }
 
 .buttonNav:hover {
@@ -126,15 +125,15 @@ body {
 
 .search {
    display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+   flex-direction: row;
+   justify-content: baseline;
+   align-items: baseline;
 }
 
 .searchButton {
    background-color: rgb(1, 192, 90);
    font-family:  'Creepster', cursive;
-   width: 50px;
+   width: max-content;
    transition: .8s;
    margin: 10px;
    cursor: pointer;
@@ -147,7 +146,9 @@ body {
 
 .searchImg {
    display: flex;
+   align-items: baseline;
    width: 4rem;
+   justify-content:baseline
 }
 
 .input{ 
@@ -162,7 +163,7 @@ body {
 /* todo ABOUT */
 
 .about {
-   color: #e9ed00;
+   color: #393938;
    display: flex;
    text-align: center;
    justify-content: center;
@@ -185,9 +186,39 @@ body {
    justify-content: center;
    align-self: center;
    color: #00ff44;
+   margin: 80px;
 }
 
 .formImg {
    width: 100%
 }
 
+.card {
+   font-family: 'DotGothic16', sans-serif;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   flex-direction: row;
+   border-radius: 12px;
+   margin: 20px;
+   padding: 2%;
+   text-align: center;
+   align-self: center;
+   height: fit-content;
+   width: 10rem;
+}
+
+.favs {
+   font-family: 'DotGothic16', sans-serif;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   flex-direction: row;
+   border-radius: 12px;
+   margin: 20px;
+   padding: 2%;
+   text-align: center;
+   align-self: center;
+   height: fit-content;
+   width: 10rem;
+}

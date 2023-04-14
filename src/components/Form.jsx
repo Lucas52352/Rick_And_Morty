@@ -8,10 +8,7 @@ const Form = ( {login} ) => {
         password: ''
     })
 
-    const [errors, setErrors] = useState({
-        username: '',
-        password: ''
-    })
+    const [errors, setErrors] = useState({})
 
     const handleInputChange = (event) => {
         setUserData({
@@ -31,7 +28,7 @@ const Form = ( {login} ) => {
     }
 
     return (
-        <form className="form">
+        <form className="form" onSubmit={handleSubmit}>
 
             <img 
                 className="formImg" 
@@ -68,7 +65,6 @@ const Form = ( {login} ) => {
             <button
                 type="submit"
                 className="searchButton" 
-                onClick={handleSubmit}
             >Submit
 
             </button>

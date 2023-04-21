@@ -12,8 +12,7 @@ import Favorites from './components/Favorites';
 const USERNAME = 'example@123.com'
 const PASSWORD = '123asd'
 
-const URL_BASE = 'https://be-a-rym.up.railway.app/api/character'
-const API_KEY = '04b1fbd63fb6.5f27b86200d900cd5422'
+const URL_BASE = 'http://localhost:3001/rickandmorty/character'
 
 function App() {
    
@@ -34,7 +33,7 @@ function App() {
    }, [access]);
 
    const onSearch = (id) => {
-         axios(`${URL_BASE}/${id}?key=${API_KEY}`)
+         axios(`${URL_BASE}/${id}`)
          .then(response => response.data)
          .then(( data ) => {
             if (data.name) {

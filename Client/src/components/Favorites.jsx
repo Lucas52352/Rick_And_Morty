@@ -6,7 +6,7 @@ import { useState } from "react"
 const Favorites = ( {myFavorites} ) => {
 
     const dispatch = useDispatch()
-    const [aux, setAux] = useState(false)
+    const [_aux, setAux] = useState(false)
 
     const handleOrder = (event) => {
         dispatch(orderCards(event.target.value))

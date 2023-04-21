@@ -17,7 +17,7 @@ function Card( {id, name, image, onClose, addFav, removeFav, myFavorites} ) {
       }
       else {
          setIsFav(true)
-         addFav({ id, image})
+         addFav({id, image})
       }
    }
 
@@ -27,7 +27,7 @@ function Card( {id, name, image, onClose, addFav, removeFav, myFavorites} ) {
             setIsFav(true)
          }
       })
-   }, [myFavorites])
+   }, [myFavorites, id])
 
    return (
       <div className='card'>

@@ -10,7 +10,7 @@ function Card( {id, name, image, onClose, addFav, removeFav, myFavorites} ) {
 
    const alt = `image of ${name}`
 
-   const handleFavorite = (isFav) => {
+   const handleFavorite = () => {
       if(isFav === true) {
          setIsFav(false)
          removeFav(id)
@@ -27,7 +27,7 @@ function Card( {id, name, image, onClose, addFav, removeFav, myFavorites} ) {
             setIsFav(true)
          }
       })
-   }, [myFavorites, id])
+   }, [myFavorites])
 
    return (
       <div className='card'>

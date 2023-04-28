@@ -4,7 +4,7 @@ import validation from "./validation";
 const Form = ( {login} ) => {
 
     const [userData, setUserData] = useState({
-        username: '',
+        email: '',
         password: ''
     })
 
@@ -36,18 +36,18 @@ const Form = ( {login} ) => {
                 alt="Login GIF"
             />
 
-            <label htmlFor="username">Email:
+            <label htmlFor="email">Email:
 
                 <input 
                     type='text' 
-                    name='username'
-                    placeholder='Type your username' 
+                    name='email'
+                    placeholder='Type your email' 
                     onChange={handleInputChange} 
-                    value={userData.username}
+                    value={userData.email}
                 />  
 
             </label>
-            {errors.username && <p style={{color: 'red'}}>{errors.username}</p>}
+            {errors.email && <p style={{color: 'red'}}>{errors.email}</p>}
 
             <label htmlFor="password">Password:
 

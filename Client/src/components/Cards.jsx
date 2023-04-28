@@ -5,17 +5,17 @@ export default function Cards( {characters, onClose} ) {
    return (
       <div className='cards'> 
           {
-            characters.map(( {id, name, status, species, gender, origin, image} ) => {
+            characters.map(({ id, name, status, species, gender, origin, image }) => {
                return (
                   <Card 
                      key={id}
                      id={id}
                      name={name}
-                     status={status}
+                     image={image}
                      species={species}
                      gender={gender}
                      origin={origin.name}
-                     image={image}
+                     status={status}
                      onClose={onClose}
                   />
                )

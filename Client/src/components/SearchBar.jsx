@@ -24,7 +24,7 @@ export default function SearchBar( {onSearch} ) {
             onChange={handleChange}
          />
 
-         <button type="submit" className="searchButton" onClick={() => {onSearch(id); setId('')}}>Añadir</button>
+         <button className="searchButton" onClick={() => {onSearch(id); setId('')}}>Añadir</button>
       </div>
    );
 }

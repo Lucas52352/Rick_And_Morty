@@ -1,6 +1,5 @@
 import { React, useState, useEffect } from 'react';
 import { Routes, Route, useLocation, useNavigate} from 'react-router-dom'
-import axios from 'axios';
 import './App.css';
 import Nav from './components/Nav';
 import Cards from './components/Cards.jsx';
@@ -8,11 +7,9 @@ import About from './components/About';
 import Detail from './components/Detail';
 import Form from './components/Form';
 import Favorites from './components/Favorites';
+import axios from 'axios';
 
-const USERNAME = 'example@123.com'
-const PASSWORD = '123asd'
-
-const URL_BASE = 'http://localhost:3001/rickandmorty/character'
+const URL = 'http://localhost:3001/rickandmorty/login';
 
 function App() {
    
@@ -21,28 +18,40 @@ function App() {
    const location = useLocation()
    const navigate = useNavigate()
 
-   const login = (userData) => {
-      if(userData.username === USERNAME && userData.password === PASSWORD) {
-         setAccess(true)
-         navigate('/home')
+   const login = async (userData) => {
+      try {
+         const { email, password } = userData;
+         const { data } = await axios(URL + `?email=${email}&password=${password}`)
+         const { access } = data
+         
+         setAccess(access)
+         access && navigate('/home')
+
+      } catch (error) {
+         console.log(error.message)
       }
    }
 
    useEffect(() => {
       !access && navigate('/');
-   }, [access]);
+   }, [access, navigate]);
 
-   const onSearch = (id) => {
-         axios(`${URL_BASE}/${id}`)
-         .then(response => response.data)
-         .then(( data ) => {
-            if (data.name) {
-               setCharacters((oldChars) => [...oldChars, data]);
-            } else {
-               window.alert('¡No hay personajes con este ID!');
-            }
-         });
+   const onSearch = async (id) => {
+
+      try {
+
+         const { data } = await axios(`http://localhost:3001/rickandmorty/character/${id}`)
+
+         if(data.name) {
+            setCharacters((oldChars) => [...oldChars, data])
+         }
+
+      } catch (error) {
+
+         alert('No hay personaje con este ID')
+
       }
+   }
 
    const onClose = (id) => {
       const filteredChar = characters.filter(character => character.id !== id)
